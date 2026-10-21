@@ -24,6 +24,10 @@ public class HeadDeletion3 {
         return head;
     }
 
+
+
+
+    ///HEAD DELETION
     private static Node4 removesHead(Node4 head) {
         if (head == null) {
             return head;
@@ -31,6 +35,27 @@ public class HeadDeletion3 {
 
         head = head.next;
         return head;
+    }
+
+
+
+    //TAIL DELETION
+    private static  Node4 removeTail(Node4 head){
+        if(head==null|| head.next==null){
+            return null ;
+
+        }
+
+        Node4 temp = head;
+        while(temp.next.next!=null){
+            temp = temp.next;
+
+        }
+        temp.next= null;
+        return head;
+
+
+
     }
 
     private static void print(Node4 head) {
@@ -45,7 +70,10 @@ public class HeadDeletion3 {
         int[] arr = {12, 5, 6, 8};
 
         Node4 head = convertArr2LL(arr);
-        head = removesHead(head);
+        head = removeTail(head);
+
+//        head = removesHead(head);
         print(head);
+
     }
 }
