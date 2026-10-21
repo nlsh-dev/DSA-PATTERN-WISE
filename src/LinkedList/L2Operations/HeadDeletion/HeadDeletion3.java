@@ -1,4 +1,4 @@
-package LinkedList.L2Operations;
+package LinkedList.L2Operations.HeadDeletion;
 
 class Node4 {
     int data;

@@ -1,15 +1,18 @@
-package LinkedList.L2Operations;
+package LinkedList.L2Operations.HeadDeletion;
 
-class Node {
-    int data;
-    Node next;
+public class HeadDeletion2 {
 
-    Node(int data) {
-        this.data = data;
-        this.next = null;
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
     }
 
-    public static Node removeElement(Node head) {
+    public static Node removElement(Node head) {
         if (head == null) {
             return null;
         }
@@ -17,11 +20,10 @@ class Node {
         head = head.next;
         return head;
     }
-}
 
-public class HeadDeletion {
     public static void main(String[] args) {
-        int[] arr = {12, 4, 6, 8};
+
+        int[] arr = {12, 4, 5, 6};
 
         Node head = new Node(arr[0]);
         Node temp = head;
@@ -31,7 +33,8 @@ public class HeadDeletion {
             temp = temp.next;
         }
 
-        head = Node.removeElement(head);
+        head = removElement(head);
+
         temp = head;
 
         while (temp != null) {

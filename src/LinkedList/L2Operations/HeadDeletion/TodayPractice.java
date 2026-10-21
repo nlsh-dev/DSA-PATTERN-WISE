@@ -1,4 +1,4 @@
-package LinkedList.L2Operations;
+package LinkedList.L2Operations.HeadDeletion;
 
 
 public class TodayPractice {
