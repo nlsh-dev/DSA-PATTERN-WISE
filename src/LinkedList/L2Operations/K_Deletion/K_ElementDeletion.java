@@ -76,7 +76,7 @@ public class K_ElementDeletion {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2,4, 5, 6,};
+        int[] arr = {1, 8,4, 5, 6,};
         Nodee head = covertArray2LL(arr);
         head = DeleteKelement(head  , 3);
          print(head);
