@@ -15,6 +15,32 @@ class ListNode {
 
 public class OddEvenNode {
 
+    //optimizeed code soltuon
+
+    public ListNode oddEvenList1(ListNode head) {
+
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode even = head.next;
+        ListNode odd = head;
+        ListNode evenHead = head.next;
+
+        while (even != null && even.next != null) {
+
+            odd.next = odd.next.next;
+            even.next = even.next.next;
+
+            odd = odd.next;
+            even = even.next;
+        }
+
+        odd.next = evenHead;
+
+        return head;
+    }
+
     public ListNode oddEvenList(ListNode head) {
 
         if (head == null || head.next == null) {
@@ -102,6 +128,7 @@ public class OddEvenNode {
 
         OddEvenNode obj = new OddEvenNode();
         head = obj.oddEvenList(head);
+
 
         System.out.println("After Odd-Even Rearrangement:");
         printLinkedList(head);
